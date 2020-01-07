@@ -48,7 +48,7 @@ class SignIn extends Component {
                                         type="submit" onClick={this.handleSubmit}> Login
                                     </button>
                                 </div>
-                                <a id="registar-link" className="already" href="/signup"
+                                <a id="registar-link" className="already" href="/Chamine037/#/Chamine037/signup"
                                    bsStyle="color: #505e6c;align-items: center;align-content: center;text-align: center;font-size: 15px;text-decoration: none;"><br/>Não
                                     tem uma conta?&nbsp;<strong><span
                                         bsStyle="text-decoration: underline;">Registar</span>.</strong><br/><br/></a>

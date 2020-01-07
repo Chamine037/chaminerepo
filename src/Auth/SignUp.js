@@ -139,7 +139,7 @@ class SignUp extends Component {
                                                                        id="paragrafo-concordar-termos"
                                                                        bsStyle="margin-top: 10px;margin-bottom: 10px;">
                                         <input
-                                        className="form-check-input" type="checkbox" id="checkbox"/>Ao criar uma conta está a concordar com os termos da <a id="link-politica-privacidade" href="/termos">política de privacidade</a>.</label>
+                                        className="form-check-input" type="checkbox" id="checkbox"/>Ao criar uma conta está a concordar com os termos da <a id="link-politica-privacidade" href="/Chamine037/#/Chamine037/termos">política de privacidade</a>.</label>
                                     </div>
                                 </div>
                                 <div className="form-group"
@@ -150,7 +150,7 @@ class SignUp extends Component {
                                         </button>
                                     </div>
                                 </div>
-                                <a id="paragrafo-redireciona-login" className="already" href="/signin"
+                                <a id="paragrafo-redireciona-login" className="already" href="/Chamine037/#/Chamine037/signin"
                                    bsStyle="color: #505e6c;">Já tem uma conta? <strong><span
                                     bsStyle="text-decoration: underline;">Autenticar</span></strong>.</a></form>
                     </div>
