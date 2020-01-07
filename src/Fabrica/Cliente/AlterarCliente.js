@@ -88,7 +88,7 @@ class AlterarCliente extends Component {
                 <div className="input-group">
                     <span className="input-group-btn">
                         <button className="btn" style={{color:'#000000', background:'#9d5d2f'}} onClick={this.handleClick}>Gravar Alterações</button>
-                    </span>
+                    </span>&nbsp;&nbsp;
                     <div className="right" >
                         <button className="btn" style={{color:'#000000', background:'#9d5d2f'}} onClick={this.handleClick1}>Voltar</button>
                     </div>

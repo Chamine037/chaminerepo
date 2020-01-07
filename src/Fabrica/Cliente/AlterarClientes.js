@@ -100,10 +100,10 @@ class AlterarCliente extends Component {
                 </div>
                 <div className="input-group">
                     <span className="input-group-btn">
-                        <button className="btn pink lighten-1 z-depth-0" onClick={this.handleClick}>Gravar Alterações</button>
-                    </span>
+                        <button className="btn" style={{ color: '#000000', background: '#9d5d2f' }} onClick={this.handleClick}>Gravar Alterações</button>
+                    </span>&nbsp;&nbsp;
                     <div className="right" >
-                        <button className="btn pink lighten-1 z-depth-0" onClick={this.handleClick1}>Voltar</button>
+                        <button className="btn" style={{ color: '#000000', background: '#9d5d2f' }} onClick={this.handleClick1}>Voltar</button>
                     </div>
                 </div>
             </div>
