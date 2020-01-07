@@ -40,29 +40,29 @@ class SolicitarAlteracao extends Component {
     handleClick = (e) => {
         e.preventDefault();
         axios.get('https://10.9.10.37:3000/solicitacao/solicitacao/' + this.state.id).then((response) => {
-            if(response.data.length!=0){
+            if (response.data.length != 0) {
                 axios.delete('https://10.9.10.37:3000/solicitacao/encomenda/' + response.data[0].encomenda)
             }
             axios.post('https://10.9.10.37:3000/solicitacao/',
-            {
-                "nova_quantidade": this.state.quantidade,
-                "nova_data_conclusao": this.state.data_conclusao,
-                "data_solicitacao": this.state.data_solicitacao,
-                "encomenda": this.state.id,
-                "cliente": this.state.cliente,
-                "produto": this.state.produto
-            },
-            {
-                headers: { "cliente": localStorage.getItem('cli_id') }
-            }).then((response) => {
+                {
+                    "nova_quantidade": this.state.quantidade,
+                    "nova_data_conclusao": this.state.data_conclusao,
+                    "data_solicitacao": this.state.data_solicitacao,
+                    "encomenda": this.state.id,
+                    "cliente": this.state.cliente,
+                    "produto": this.state.produto
+                },
+                {
+                    headers: { "cliente": localStorage.getItem('cli_id') }
+                }).then((response) => {
 
-                window.alert("Solicitacao enviada com sucesso!")
+                    window.alert("Solicitacao enviada com sucesso!")
 
-                console.log(response);
-            }, (error) => {
-                console.log(error);
-                window.alert("Sem sucesso!")
-            })
+                    console.log(response);
+                }, (error) => {
+                    console.log(error);
+                    window.alert("Sem sucesso!")
+                })
         })
     };
     handleClick3 = (e) => {
@@ -122,9 +122,9 @@ class SolicitarAlteracao extends Component {
                 <br />
                 <div className="input-group ">
                     <span className="input-group-btn">
-                        <button className="btn pink lighten-1 z-depth-0" onClick={this.handleClick}>Solicitar alteracao</button> &nbsp;&nbsp;&nbsp;
-                        <button className="btn pink lighten-1 z-depth-0" onClick={this.handleClick3}>Cancelar encomenda</button>
-                        <button className="btn pink lighten-1 z-depth-0 right" onClick={this.handleClick2}>Voltar</button>
+                        <button className="btn" style={{ color: '#000000', background: '#9d5d2f' }} onClick={this.handleClick}>Solicitar alteracao</button> &nbsp;&nbsp;&nbsp;
+                        <button className="btn" style={{ color: '#000000', background: '#9d5d2f' }} onClick={this.handleClick3}>Cancelar encomenda</button>
+                        <button className="btn" style={{ color: '#000000', background: '#9d5d2f' }} onClick={this.handleClick2}>Voltar</button>
                     </span>
                 </div>
             </div>

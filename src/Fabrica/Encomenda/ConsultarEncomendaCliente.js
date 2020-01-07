@@ -65,8 +65,8 @@ class ConsultarEncomendaCliente extends Component {
                 <br />
                 <div className="input-group center">
                     <span className="input-group-btn">
-                        <button className="btn pink lighten-1 z-depth-0" onClick={this.handleClick2}>Voltar</button> &nbsp;&nbsp;&nbsp;
-                    <button className="btn pink lighten-1 z-depth-0" onClick={this.handleClick}>Solicitar alteracao</button>
+                    <button className="btn" style={{ color: '#000000', background: '#9d5d2f' }} onClick={this.handleClick2}>Voltar</button> &nbsp;&nbsp;&nbsp;
+                    <button className="btn" style={{ color: '#000000', background: '#9d5d2f' }} onClick={this.handleClick}>Solicitar alteracao</button>
                     </span>
                 </div>
             </div>
