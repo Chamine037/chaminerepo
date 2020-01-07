@@ -18,19 +18,20 @@ const EncomendaSumario = ({ encomenda }) => {
         }
     }
     else {
-        return (
-            <div className="card z-depth-0 project-summary">
-                <div className="card-content grey-text text-darken-3">
-                    <h6>Nome do cliente: UTILIZADOR APAGADO</h6>
-                    <span>Produto : {encomenda.produto[0].nome}<br /></span>
-                    <span>Quantidade : {encomenda.quantidade}<br /></span>
-                    <span>Estado : {encomenda.estado}<br /></span>
-                    <span>Data Limite : {encomenda.data_conclusao}<br /></span>
+        if (localStorage.getItem('isAdmin') === "true") {
+            return (
+                <div className="card z-depth-0 project-summary">
+                    <div className="card-content grey-text text-darken-3">
+                        <h6>Nome do cliente: UTILIZADOR APAGADO</h6>
+                        <span>Produto : {encomenda.produto[0].nome}<br /></span>
+                        <span>Quantidade : {encomenda.quantidade}<br /></span>
+                        <span>Estado : {encomenda.estado}<br /></span>
+                        <span>Data Limite : {encomenda.data_conclusao}<br /></span>
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }
     }
-
     return (
         <div></div>
     )
