@@ -452,7 +452,9 @@ function doMouseDown(x, y) {
             return false;
         case DELETE:
             if (objectHit != meshFloor) {
-                scene.remove(objectHit);
+                if(scene.remove(objectHit)){
+                    removeLp(objectHit);
+                }
                 render();
             }
             return false;
@@ -1263,6 +1265,15 @@ export function addMachine(inputX, inputY, inputZ) {
     }
 }
 
+export function removeLp(object) {
+    for (var i = 0; i < linhasproducao.length; i++) {
+        if (object.name == linhasproducao[i].nome) {
+            axios.delete('https://mdf37.azurewebsites.net/api/linhaproducao/' + linhasproducao[i].id)
+            // console.log(object);
+        }
+    }
+}
+
 //Activar maquina hidraulica de pressao
 export function pressAnimation() {
     var pressBtn = document.getElementById("pressBtn");
@@ -1330,7 +1341,7 @@ export function addLp(nome, x, y, z) {
 
     var grid = new THREE.LineSegments(gridGeometry, new THREE.LineBasicMaterial({ color: 0xFF0000, ambient: 0xCCCCCC, transparent: true, opacity: 0, depthTest: false }));
     grid.position.set(y, 3, x)
-    grid.name = "linha de producao "+ nome;
+    grid.name = nome;
     grid.add(g);
     scene.add(grid);
     objects.push(grid);
@@ -1566,15 +1577,12 @@ export function mouseDeleteFunc() {
     mouseDelete = !mouseDelete;
 
     if (mouseDelete) {
-
-
-
-
         mouseDeleteBtn.style.background = "green";
         mouseAction = DELETE;
     } else {
         mouseDeleteBtn.style.background = "red";
         mouseAction = NADA;
+        window.location.reload();
     }
 }
 // This will move tooltip to the current mouse position and show it by timer.
