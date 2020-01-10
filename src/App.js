@@ -47,6 +47,10 @@ import AlterarClientes from './Fabrica/Cliente/AlterarClientes';
 import ListarProdutoByTempoProducao from './Fabrica/Encomenda/ListarProdutoByTempoProducao';
 import ListarProdutosMaisVezesEncomendados from './Fabrica/Encomenda/ListarProdutosMaisVezesEncomendados';
 import ApagarCliente from './Fabrica/Cliente/ApagarCliente';
+import PlaneamentoProducao from './Fabrica/ALGAV/PlaneamentoProducao';
+import BalanceamentoLinhas from "./Fabrica/ALGAV/BalanceamentoLinhas";
+import BaseConhecimentos from "./Fabrica/ALGAV/BaseConhecimentos";
+import AgendasTemporais from "./Fabrica/ALGAV/AgendasTemporais";
 
 
 class App extends Component {
@@ -102,6 +106,10 @@ class App extends Component {
             <Route path='/listarprodutotempo' component={ListarProdutoByTempoProducao} />
             <Route path='/produtomaisvezesencomendado' component={ListarProdutosMaisVezesEncomendados} />
             <Route path='/apagarconta' component={ApagarCliente} />
+            <Route path='/algav' component={PlaneamentoProducao} />
+            <Route path='/balanceamentolinhas' component={BalanceamentoLinhas} />
+            <Route path='/baseconhecimentos' component={BaseConhecimentos} />
+            <Route path='/agendastemporais' component={AgendasTemporais} />
           </Switch>
         </div>
       </HashRouter>

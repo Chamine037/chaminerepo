@@ -16,6 +16,7 @@ const links = (props) => {
                 <li><NavLink to='/areacliente'>Área do Cliente</NavLink></li>
                 <li><NavLink to='/encomendas'>Encomendas</NavLink></li>
                 <li><NavLink to='/sgrai'>Fabrica Sgrai</NavLink></li>
+                <li><NavLink to='/algav'>Planeamento Produção</NavLink></li>
                 <li><a onClick={props.signOut}>Logout</a></li>
                 <img className="border rounded-circle login-one"id="icon-chamine" src="./img/icon.jpg"/>
             </ul>
