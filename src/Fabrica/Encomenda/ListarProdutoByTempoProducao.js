@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import axios from 'axios'
 import { HashRouter, Redirect } from 'react-router-dom'
 import ProdutoSumario from '../Produto/ProdutoSumario'
@@ -41,7 +40,7 @@ class ListarProdutoByTempoProducao extends Component {
                     {this.state.produtos.map((p) =>
                         <ProdutoSumario produto={p} />)}
                     <div className="center">
-                        <button className="btn pink lighten-1 z-depth-0" onClick={this.handleClick}>Criar Encomenda</button>
+                        <button className="btn" style={{ color: '#000000', background: '#9d5d2f' }} onClick={this.handleClick}>Criar Encomenda</button>
                     </div>
                 </div>
             </div>
@@ -51,20 +50,11 @@ class ListarProdutoByTempoProducao extends Component {
     async componentWillMount() {
         await axios.get('https://mdp37.azurewebsites.net/api/GetAllProdutos').then(response => this.setState({ produtos: response.data }))
         this.setState({ data: true })
-
-        // this.state.produtos.sort(function (a, b) {
-        //     return parseFloat(a.tempoproducao) - parseFloat(b.tempoproducao);
-        // })
-
-        console.log(this.state.produtos);
+        var vag = this.state.produtos.sort(function (a, b) {
+            return a.tempoProducao - b.tempoProducao
+        });
+        this.setState({ produtos: vag });
     }
 }
 
-const mapStateToProps = (state) => {
-
-    return {
-        auth: state.auth
-    }
-}
-
-export default connect(mapStateToProps)(ListarProdutoByTempoProducao)
+export default ListarProdutoByTempoProducao
