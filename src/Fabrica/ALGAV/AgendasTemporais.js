@@ -47,8 +47,8 @@ class AgendasTemporais extends Component {
     }
 
     async componentWillMount() {
-        await axios.get('http://10.9.10.37:5000/encomendas').then(response => this.setState({encomendas: response.data}));
-        await axios.get('http://10.9.10.37:5000/agendas').then(response => this.setState({agendas: response.data}));
+        await axios.get('https://10.9.10.37:5000/encomendas').then(response => this.setState({encomendas: response.data}));
+        await axios.get('https://10.9.10.37:5000/agendas').then(response => this.setState({agendas: response.data}));
     }
 }
 
