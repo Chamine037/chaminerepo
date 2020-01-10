@@ -40,7 +40,7 @@ class BalanceamentoLinhas extends Component {
     }
 
     async componentWillMount() {
-        await axios.get('https://10.9.10.37:5000/balanceamento').then(response => this.setState({ balanceamento: response.data }))
+        await axios.get('http://10.9.10.37:5000/balanceamento').then(response => this.setState({ balanceamento: response.data }))
     }
 }
 

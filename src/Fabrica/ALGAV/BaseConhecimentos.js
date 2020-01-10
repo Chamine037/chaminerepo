@@ -73,12 +73,12 @@ class BaseConhecimentos extends Component {
     }
 
     async componentWillMount() {
-        await axios.get('https://10.9.10.37:5000/linhas').then(response => this.setState({linhas: response.data}));
-        await axios.get('https://10.9.10.37:5000/maquinas').then(response => this.setState({maquinas: response.data}));
-        await axios.get('https://10.9.10.37:5000/maq_linha').then(response => this.setState({tipos_maq_linha: response.data}));
-        await axios.get('https://10.9.10.37:5000/operacoes').then(response => this.setState({tipo_operacoes: response.data}));
-        await axios.get('https://10.9.10.37:5000/produtos').then(response => this.setState({produtos: response.data}));
-        await axios.get('https://10.9.10.37:5000/opsproduto').then(response => this.setState({operacoes_produto: response.data}));
+        await axios.get('http://10.9.10.37:5000/linhas').then(response => this.setState({linhas: response.data}));
+        await axios.get('http://10.9.10.37:5000/maquinas').then(response => this.setState({maquinas: response.data}));
+        await axios.get('http://10.9.10.37:5000/maq_linha').then(response => this.setState({tipos_maq_linha: response.data}));
+        await axios.get('http://10.9.10.37:5000/operacoes').then(response => this.setState({tipo_operacoes: response.data}));
+        await axios.get('http://10.9.10.37:5000/produtos').then(response => this.setState({produtos: response.data}));
+        await axios.get('http://10.9.10.37:5000/opsproduto').then(response => this.setState({operacoes_produto: response.data}));
 }
 }
 
