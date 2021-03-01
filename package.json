@@ -26,7 +26,7 @@
     "sass": "^1.23.7",
     "scripts": "^0.1.0",
     "serve": "^11.2.0",
-    "three": "^0.110.0",
+    "three": "^0.125.0",
     "three-mtl-loader": "^1.0.2",
     "typescript": "^3.7.3"
   },
